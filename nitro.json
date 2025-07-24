@@ -1,0 +1,17 @@
+{
+  "cxxNamespace": ["nitrocountrypicker"],
+  "ios": {
+    "iosModuleName": "NitroCountryPicker"
+  },
+  "android": {
+    "androidNamespace": ["nitrocountrypicker"],
+    "androidCxxLibName": "nitrocountrypicker"
+  },
+  "autolinking": {
+    "NitroCountryPicker": {
+      "swift": "NitroCountryPicker",
+      "kotlin": "NitroCountryPicker"
+    }
+  },
+  "ignorePaths": ["node_modules"]
+}
