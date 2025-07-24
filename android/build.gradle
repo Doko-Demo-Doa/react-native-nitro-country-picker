@@ -6,6 +6,7 @@ buildscript {
   repositories {
     google()
     mavenCentral()
+    maven { url 'https://jitpack.io' }
   }
 
   dependencies {
@@ -116,14 +117,21 @@ android {
 
 repositories {
   mavenCentral()
+  maven { url 'https://jitpack.io' }
   google()
 }
 
 def kotlin_version = getExtOrDefault("kotlinVersion")
+def appcompat_version = "1.7.1"
 
 dependencies {
   implementation "com.facebook.react:react-android"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
   implementation project(":react-native-nitro-modules")
+
+  implementation "com.github.ahmmedrejowan:CountryCodePickerCompose:0.1"
+  implementation "com.github.mukeshsolanki:country-picker-android:2.0.4"
+  implementation "androidx.appcompat:appcompat:$appcompat_version"
+  implementation "com.google.android.material:material:1.12.0"
 }
 

@@ -7,3 +7,7 @@ const NitroCountryPickerHybridObject =
 export function multiply(a: number, b: number): number {
   return NitroCountryPickerHybridObject.multiply(a, b);
 }
+
+export function show() {
+  return NitroCountryPickerHybridObject.show();
+}
