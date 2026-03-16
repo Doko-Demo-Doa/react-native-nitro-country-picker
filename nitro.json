@@ -9,8 +9,14 @@
   },
   "autolinking": {
     "NitroCountryPicker": {
-      "swift": "NitroCountryPicker",
-      "kotlin": "NitroCountryPicker"
+      "ios": {
+        "language": "swift",
+        "implementationClassName": "NitroCountryPicker"
+      },
+      "android": {
+        "language": "kotlin",
+        "implementationClassName": "NitroCountryPicker"
+      }
     }
   },
   "ignorePaths": ["node_modules"]
