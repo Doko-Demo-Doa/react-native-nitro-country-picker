@@ -10,6 +10,11 @@ import com.margelo.nitro.NitroModules
 
 @DoNotStrip
 class NitroCountryPicker : HybridNitroCountryPickerSpec() {
+  companion object {
+    const val NAME = "NitroCountryPicker"
+    const val EVENT_NAME: String = "CountryPickedEvent"
+  }
+
   override fun multiply(a: Double, b: Double): Double {
     return a * b
   }

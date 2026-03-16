@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, Button } from 'react-native';
+import { Text, View, StyleSheet, Pressable } from 'react-native';
 import { multiply, show } from 'react-native-nitro-country-picker';
 
 const result = multiply(3, 3);
@@ -8,7 +8,12 @@ export default function App() {
     <View style={styles.container}>
       <Text>Result: {result}</Text>
 
-      <Button onPress={show} title="Show" />
+      <Pressable
+        onPress={show}
+        style={{ padding: 20, backgroundColor: 'blue' }}
+      >
+        <Text>Testettt</Text>
+      </Pressable>
     </View>
   );
 }
