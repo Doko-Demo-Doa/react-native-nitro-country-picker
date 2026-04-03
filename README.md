@@ -11,16 +11,13 @@ Contents below are auto-generated and are subject to change.
 
 ## Installation
 
-
 ```sh
 npm install react-native-nitro-country-picker react-native-nitro-modules
 
 > `react-native-nitro-modules` is required as this library relies on [Nitro Modules](https://nitro.margelo.com/).
 ```
 
-
 ## Usage
-
 
 ```js
 import { multiply } from 'react-native-nitro-country-picker';
@@ -29,7 +26,6 @@ import { multiply } from 'react-native-nitro-country-picker';
 
 const result = multiply(3, 7);
 ```
-
 
 ## Contributing
 
