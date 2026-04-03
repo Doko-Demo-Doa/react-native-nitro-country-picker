@@ -1,5 +1,9 @@
 class NitroCountryPicker: HybridNitroCountryPickerSpec {
-    public func multiply(a: Double, b: Double) throws -> Double {
-        return a * b
-    }
+  func show() throws {
+    // TODO: Show the picker here
+  }
+  
+  public func multiply(a: Double, b: Double) throws -> Double {
+    return a * b
+  }
 }
