@@ -6,8 +6,10 @@ import type { HybridObject } from 'react-native-nitro-modules';
 //   code: string;
 // }
 
-export interface NitroCountryPicker
-  extends HybridObject<{ ios: 'swift'; android: 'kotlin' }> {
+export interface NitroCountryPicker extends HybridObject<{
+  ios: 'swift';
+  android: 'kotlin';
+}> {
   multiply(a: number, b: number): number;
 
   show(): void;
