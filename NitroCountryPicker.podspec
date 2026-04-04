@@ -22,6 +22,7 @@ Pod::Spec.new do |s|
 
   s.dependency 'React-jsi'
   s.dependency 'React-callinvoker'
+  s.dependency 'CountryPickerAKS'
 
   load 'nitrogen/generated/ios/NitroCountryPicker+autolinking.rb'
   add_nitrogen_files(s)
