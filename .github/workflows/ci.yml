@@ -150,12 +150,20 @@ jobs:
           xcode-version: ${{ env.XCODE_VERSION }}
 
       - name: Install cocoapods
-        if: env.turbo_cache_hit != 1 && steps.cocoapods-cache.outputs.cache-hit != 'true'
+        if: env.turbo_cache_hit != 1
         run: |
           cd example
           bundle install
-          bundle exec pod repo update --verbose
+          rm -rf ios/Pods ios/NitroCountryPickerExample.xcworkspace
           bundle exec pod install --project-directory=ios
+
+      - name: Verify iOS deployment target in generated Pods project
+        if: env.turbo_cache_hit != 1
+        run: |
+          if grep -nE "IPHONEOS_DEPLOYMENT_TARGET = 15\.1|ios15\.1" example/ios/Pods/Pods.xcodeproj/project.pbxproj; then
+            echo "Detected iOS 15.1 in generated Pods project. Expected iOS 16.0."
+            exit 1
+          fi
 
       - name: Build example for iOS
         run: |
