@@ -11,9 +11,15 @@ This is an **opinionated** native module library for React Native that shows a n
 
 ```sh
 npm install react-native-nitro-country-picker react-native-nitro-modules
+```
+
+or
+
+```sh
+yarn install react-native-nitro-country-picker react-native-nitro-modules
+```
 
 > `react-native-nitro-modules` is required as this library relies on [Nitro Modules](https://nitro.margelo.com/).
-```
 
 ## Usage
 
