@@ -1,20 +1,30 @@
 # react-native-nitro-country-picker
 
-A native country picker for React Native, powered by Nitro Modules.
+A Promise-based, native country picker for React Native, powered by Nitro Modules.
+
+[![npm version](https://img.shields.io/npm/v/react-native-nitro-country-picker?style=for-the-badge&color=blue)](https://www.npmjs.com/package/react-native-nitro-country-picker)
+[![Monthly downloads](https://img.shields.io/npm/dm/react-native-nitro-country-picker?style=for-the-badge)](https://www.npmjs.com/package/react-native-nitro-country-picker)
+[![New Architecture](https://img.shields.io/badge/New%20Architecture-Ready-5f3dc4?style=for-the-badge)](https://reactnative.dev/docs/the-new-architecture/landing-page)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Supported-3178C6?style=for-the-badge)](https://www.typescriptlang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-2f9e44?style=for-the-badge)](LICENSE)
+[![iOS](https://img.shields.io/badge/iOS-15.1%2B-000000?style=for-the-badge&logo=apple)](https://developer.apple.com/ios/)
+[![Android](https://img.shields.io/badge/Android-API%2024%2B-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com/)
+[![Nitro Modules](https://img.shields.io/badge/Nitro%20Modules-Enabled-ff6b00?style=for-the-badge)](https://nitro.margelo.com/)
+
+| Preview 1                                                                                                                          | Preview 2                                                                                                             |
+| ---------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| <img width="350" height="781" alt="Image" src="https://github.com/user-attachments/assets/4205fe25-c4db-47a2-82b9-0c37ed1dda79" /> | <img width="350" alt="Image" src="https://github.com/user-attachments/assets/e639b1e0-d702-4d93-9444-12528d560942" /> |
 
 This library provides a single async API that opens a native picker and returns structured country data.
+
+I created this library because I kept running into cases where I needed to implement a country code picker. There are several options, but they are either JS-only solutions with a declarative API (often with poor performance) or noticeably laggy.
+
+All I wanted was a module with a single `pickCountry` method that returns country data. Done. No hassle. The UI should include a list and a simple search bar. It can be customized, but for now it should stay as simple as possible.
 
 - Android native implementation: [CountryCodePickerCompose](https://github.com/ahmmedrejowan/CountryCodePickerCompose)
 - iOS native implementation: [CountryPickerAKS](https://github.com/aksamitsah/CountryPickerAKS)
 
-## Features
-
-- Native picker UI on both iOS and Android
-- Promise-based API: `pickCountry(options?)`
-- Typed result object with `name`, `dialCode`, and `code`
-- `null` result when user dismisses without selection
-- Last selection cache via `getLastPickedCountry()`
-- Optional picker title input: `headerTitle` (currently applied on Android)
+---
 
 ## Requirements
 
@@ -24,6 +34,20 @@ This library provides a single async API that opens a native picker and returns 
 | Android  | API 24+ |
 
 > Note: This package depends on [react-native-nitro-modules](https://nitro.margelo.com/).
+
+---
+
+## Features
+
+- 📱 **Native UI**: Uses native picker interfaces on both iOS and Android.
+- ⚡ **Promise-Based API**: Call `pickCountry(options?)` and await the result.
+- 🔷 **Typed Return Data**: Returns a typed object with `name`, `dialCode`, and `code`.
+- 🧭 **Dismiss Handling**: Resolves to `null` when the picker is dismissed or canceled.
+- 🧠 **Last Selection Cache**: Read the last picked country with `getLastPickedCountry()`.
+- 🎛️ **Configurable Title**: Supports `headerTitle` (currently applied on Android).
+- 🧩 **Nitro Module Powered**: Built with `react-native-nitro-modules` for native performance.
+
+---
 
 ## Installation
 
@@ -37,11 +61,17 @@ or
 yarn add react-native-nitro-country-picker react-native-nitro-modules
 ```
 
-### iOS setup
+### iOS Setup
 
 ```bash
 cd ios && pod install
 ```
+
+### Android Setup
+
+No additional configuration is required for Android. Autolinking handles the native module setup.
+
+---
 
 ## Usage
 
@@ -60,6 +90,8 @@ const country = await pickCountry({
   headerTitle: 'Select your country',
 });
 ```
+
+---
 
 ## Returned Data Examples
 
@@ -108,6 +140,8 @@ if (last) {
 }
 ```
 
+---
+
 ## API
 
 ### `pickCountry(options?) => Promise<IPickedCountry | null>`
@@ -125,6 +159,8 @@ Options:
 
 Returns the most recent selected country for the current app runtime session.
 
+---
+
 ## Type Shapes
 
 ```ts
@@ -139,6 +175,8 @@ type PickCountryOptions = {
 };
 ```
 
+---
+
 ## Example App
 
 To run the included example app:
@@ -151,9 +189,13 @@ yarn ios
 yarn android
 ```
 
+---
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for development workflow and contribution guidelines.
+
+---
 
 ## License
 
