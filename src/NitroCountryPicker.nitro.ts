@@ -1,16 +1,20 @@
 import type { HybridObject } from 'react-native-nitro-modules';
 
-// interface IPickedCountry {
-//   name: string;
-//   dialCode: string;
-//   code: string;
-// }
+export interface IPickedCountry {
+  name: string;
+  dialCode: string;
+  code: string;
+}
+
+export interface PickCountryOptions {
+  headerTitle?: string;
+}
 
 export interface NitroCountryPicker extends HybridObject<{
   ios: 'swift';
   android: 'kotlin';
 }> {
-  multiply(a: number, b: number): number;
+  pickCountry(options?: PickCountryOptions): Promise<IPickedCountry | null>;
 
-  show(): void;
+  getLastPickedCountry(): IPickedCountry | null;
 }

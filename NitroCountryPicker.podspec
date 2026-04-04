@@ -26,5 +26,11 @@ Pod::Spec.new do |s|
   load 'nitrogen/generated/ios/NitroCountryPicker+autolinking.rb'
   add_nitrogen_files(s)
 
+  # Ensure generated shared C++ headers are exported to Pods/Headers/Public.
+  current_public_headers = Array(s.attributes_hash['public_header_files'])
+  s.public_header_files = current_public_headers + [
+    'nitrogen/generated/shared/c++/*.hpp',
+  ]
+
   install_modules_dependencies(s)
 end

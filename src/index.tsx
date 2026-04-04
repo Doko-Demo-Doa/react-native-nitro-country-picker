@@ -1,13 +1,19 @@
 import { NitroModules } from 'react-native-nitro-modules';
-import type { NitroCountryPicker } from './NitroCountryPicker.nitro';
+import type {
+  IPickedCountry,
+  NitroCountryPicker,
+  PickCountryOptions,
+} from './NitroCountryPicker.nitro';
 
 const NitroCountryPickerHybridObject =
   NitroModules.createHybridObject<NitroCountryPicker>('NitroCountryPicker');
 
-export function multiply(a: number, b: number): number {
-  return NitroCountryPickerHybridObject.multiply(a, b);
+export function pickCountry(
+  options?: PickCountryOptions
+): Promise<IPickedCountry | null> {
+  return NitroCountryPickerHybridObject.pickCountry(options);
 }
 
-export function show() {
-  return NitroCountryPickerHybridObject.show();
+export function getLastPickedCountry(): IPickedCountry | null {
+  return NitroCountryPickerHybridObject.getLastPickedCountry();
 }

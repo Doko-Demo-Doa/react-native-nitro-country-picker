@@ -2,12 +2,10 @@
 
 Country picker, powered by Nitro modules.
 
-This is a native module library for React Native that shows a native country picker (with search functionality). It supports iOS, Android.
+This is an **opinionated** native module library for React Native that shows a native country picker (with search functionality). It supports iOS, Android.
 
 - On Android, it's a bridge for [CountryCodePickerCompose](https://github.com/ahmmedrejowan/CountryCodePickerCompose)
 - On iOS, it's a bridge for [CountryPickerAKS](https://github.com/aksamitsah/CountryPickerAKS)
-
-Contents below are auto-generated and are subject to change.
 
 ## Installation
 
@@ -20,11 +18,15 @@ npm install react-native-nitro-country-picker react-native-nitro-modules
 ## Usage
 
 ```js
-import { multiply } from 'react-native-nitro-country-picker';
+import { pickCountry } from 'react-native-nitro-country-picker';
 
 // ...
 
-const result = multiply(3, 7);
+const picked = await pickCountry();
+
+const pickedWithCustomTitle = await pickCountry({
+  headerTitle: 'Select your country',
+});
 ```
 
 ## Contributing

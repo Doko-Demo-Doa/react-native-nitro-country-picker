@@ -1,9 +1,17 @@
+import NitroModules
+
 class NitroCountryPicker: HybridNitroCountryPickerSpec {
-  func show() throws {
-    // TODO: Show the picker here
+  private var lastPickedCountry: IPickedCountry? = nil
+
+  func pickCountry(options: PickCountryOptions?) throws -> Promise<Variant_NullType_IPickedCountry>
+  {
+    return Promise<Variant_NullType_IPickedCountry>.resolved(withResult: .first(.null))
   }
-  
-  public func multiply(a: Double, b: Double) throws -> Double {
-    return a * b
+
+  func getLastPickedCountry() throws -> Variant_NullType_IPickedCountry {
+    if let picked = lastPickedCountry {
+      return .second(picked)
+    }
+    return .first(.null)
   }
 }

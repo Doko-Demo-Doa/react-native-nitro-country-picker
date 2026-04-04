@@ -13,6 +13,7 @@ buildscript {
     classpath "com.android.tools.build:gradle:8.7.2"
     // noinspection DifferentKotlinGradleVersion
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${getExtOrDefault('kotlinVersion')}"
+    classpath "org.jetbrains.kotlin:compose-compiler-gradle-plugin:${getExtOrDefault('kotlinVersion')}"
   }
 }
 
@@ -23,6 +24,7 @@ def reactNativeArchitectures() {
 
 apply plugin: "com.android.library"
 apply plugin: "kotlin-android"
+apply plugin: "org.jetbrains.kotlin.plugin.compose"
 apply from: '../nitrogen/generated/android/nitrocountrypicker+autolinking.gradle'
 
 apply plugin: "com.facebook.react"
@@ -88,6 +90,7 @@ android {
   buildFeatures {
     buildConfig true
     prefab true
+    compose true
   }
 
   buildTypes {
@@ -101,8 +104,12 @@ android {
   }
 
   compileOptions {
-    sourceCompatibility JavaVersion.VERSION_1_8
-    targetCompatibility JavaVersion.VERSION_1_8
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
+  }
+
+  kotlinOptions {
+    jvmTarget = "17"
   }
 
   sourceSets {
@@ -123,14 +130,20 @@ repositories {
 
 def kotlin_version = getExtOrDefault("kotlinVersion")
 def appcompat_version = "1.7.1"
+def compose_bom_version = "2024.12.01"
+def activity_compose_version = "1.13.0"
 
 dependencies {
   implementation "com.facebook.react:react-android"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
   implementation project(":react-native-nitro-modules")
 
-  implementation "com.github.ahmmedrejowan:CountryCodePickerCompose:0.1"
-  implementation "com.github.mukeshsolanki:country-picker-android:2.0.4"
+  implementation "com.rejowan:ccpc:1.0.1"
+  implementation platform("androidx.compose:compose-bom:$compose_bom_version")
+  implementation "androidx.activity:activity-compose:$activity_compose_version"
+  implementation "androidx.compose.ui:ui"
+  implementation "androidx.compose.runtime:runtime"
+  implementation "androidx.compose.material3:material3"
   implementation "androidx.appcompat:appcompat:$appcompat_version"
   implementation "com.google.android.material:material:1.12.0"
 }
