@@ -134,4 +134,3 @@ dependencies {
   implementation "androidx.appcompat:appcompat:$appcompat_version"
   implementation "com.google.android.material:material:1.12.0"
 }
-

@@ -22,6 +22,7 @@ class NitroCountryPicker : HybridNitroCountryPickerSpec() {
   override fun show() {
     val builder =
       CountryPicker.Builder().with(NitroModules.applicationContext!!.baseContext)
+        .theme(CountryPicker.THEME_NEW)
         .listener {
             it ->
           Toast.makeText(NitroModules.applicationContext, it.name, Toast.LENGTH_SHORT).show()
