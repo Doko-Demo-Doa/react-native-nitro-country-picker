@@ -11166,7 +11166,7 @@ __metadata:
     react-native: "npm:0.84.1"
     react-native-builder-bob: "npm:^0.41.0"
     react-native-monorepo-config: "npm:^0.3.3"
-    react-native-nitro-modules: "npm:0.35.2"
+    react-native-nitro-modules: "npm:0.35.3"
   languageName: unknown
   linkType: soft
 
@@ -11196,28 +11196,18 @@ __metadata:
     react: "npm:19.2.4"
     react-native: "npm:0.84.1"
     react-native-builder-bob: "npm:^0.41.0"
-    react-native-nitro-modules: "npm:^0.35.3"
+    react-native-nitro-modules: "npm:0.35.3"
     release-it: "npm:^19.2.4"
     turbo: "npm:^2.9.3"
     typescript: "npm:^6.0.2"
   peerDependencies:
     react: "*"
     react-native: "*"
-    react-native-nitro-modules: ^0.26.4
+    react-native-nitro-modules: 0.35.3
   languageName: unknown
   linkType: soft
 
-"react-native-nitro-modules@npm:0.35.2":
-  version: 0.35.2
-  resolution: "react-native-nitro-modules@npm:0.35.2"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-  checksum: 10/22977e5e22c63fb91526c90fa59fcfe5c7f97978c583400f433a1d3ef8ee32fbceb0ad1b009b5bf0d1794e94a11716ad752fd7702c2d67fc808a0256c6e35488
-  languageName: node
-  linkType: hard
-
-"react-native-nitro-modules@npm:^0.35.3":
+"react-native-nitro-modules@npm:0.35.3, react-native-nitro-modules@npm:^0.35.3":
   version: 0.35.3
   resolution: "react-native-nitro-modules@npm:0.35.3"
   peerDependencies:
