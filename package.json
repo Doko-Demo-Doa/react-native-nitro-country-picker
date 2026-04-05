@@ -1,6 +1,6 @@
 {
   "name": "react-native-nitro-country-picker",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Native country picker module, powered by NitroModules",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
@@ -84,7 +84,7 @@
     "react": "19.2.4",
     "react-native": "0.84.1",
     "react-native-builder-bob": "^0.41.0",
-    "react-native-nitro-modules": "0.35.1",
+    "react-native-nitro-modules": "0.35.3",
     "release-it": "^19.2.4",
     "turbo": "^2.9.3",
     "typescript": "^6.0.2"
@@ -92,7 +92,7 @@
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
-    "react-native-nitro-modules": "0.35.1"
+    "react-native-nitro-modules": "0.35.3"
   },
   "workspaces": [
     "example"

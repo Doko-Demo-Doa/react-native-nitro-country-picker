@@ -11,9 +11,9 @@ A Promise-based, native country picker for React Native, powered by Nitro Module
 [![Android](https://img.shields.io/badge/Android-API%2024%2B-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com/)
 [![Nitro Modules](https://img.shields.io/badge/Nitro%20Modules-Enabled-ff6b00?style=for-the-badge)](https://nitro.margelo.com/)
 
-| Preview 1                                                                                                                          | Preview 2                                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| <img width="350" height="781" alt="Image" src="https://github.com/user-attachments/assets/4205fe25-c4db-47a2-82b9-0c37ed1dda79" /> | <img width="350" alt="Image" src="https://github.com/user-attachments/assets/e639b1e0-d702-4d93-9444-12528d560942" /> |
+| Preview 1                                                                    | Preview 2                                                                            |
+| ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| <img width="350" height="781" alt="iOS Preview" src="./images/cp-ios.png" /> | <img width="350" height="781" alt="Android Preview" src="./images/cp-android.png" /> |
 
 This library provides a single async API that opens a native picker and returns structured country data.
 

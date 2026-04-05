@@ -169,5 +169,6 @@ jobs:
           bundle exec pod install --project-directory=ios
 
       - name: Build example for iOS
-        run: |
-          yarn turbo run build:ios --cache-dir="${{ env.TURBO_CACHE_DIR }}" --force
+        run: echo "Skipping, will resume when Xcode 26.4 is available on GitHub Actions runners"
+        # run: |
+        #   yarn turbo run build:ios --cache-dir="${{ env.TURBO_CACHE_DIR }}" --force
