@@ -158,11 +158,6 @@ jobs:
           bundle exec pod repo update --verbose
           bundle exec pod install --project-directory=ios
 
-      - name: Expo prebuild for iOS
-        run: |
-          cd example
-          npx expo prebuild --platform ios
-
       - name: Build example for iOS
         run: |
           yarn turbo run build:ios --cache-dir="${{ env.TURBO_CACHE_DIR }}" --output-logs=full -- --verbose
