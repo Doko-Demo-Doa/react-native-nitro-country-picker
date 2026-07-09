@@ -1,0 +1,31 @@
+packages:
+  - example
+
+nodeLinker: hoisted
+autoInstallPeers: true
+strictPeerDependencies: false
+
+allowBuilds:
+  lefthook: true
+
+overrides:
+  conventional-commits-filter: ^6.0.1
+  conventional-commits-parser: ^7.0.1
+
+minimumReleaseAgeExclude:
+  - '@commitlint/cli@21.2.1'
+  - '@commitlint/read@21.2.1'
+  - commitlint@21.2.1
+  - conventional-commits-filter@6.0.1
+  - conventional-commits-parser@7.0.1
+  - lefthook-darwin-arm64@2.1.10
+  - lefthook-darwin-x64@2.1.10
+  - lefthook-freebsd-arm64@2.1.10
+  - lefthook-freebsd-x64@2.1.10
+  - lefthook-linux-arm64@2.1.10
+  - lefthook-linux-x64@2.1.10
+  - lefthook-openbsd-arm64@2.1.10
+  - lefthook-openbsd-x64@2.1.10
+  - lefthook-windows-arm64@2.1.10
+  - lefthook-windows-x64@2.1.10
+  - lefthook@2.1.10

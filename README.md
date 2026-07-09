@@ -61,6 +61,12 @@ or
 yarn add react-native-nitro-country-picker react-native-nitro-modules
 ```
 
+or
+
+```bash
+pnpm add react-native-nitro-country-picker react-native-nitro-modules
+```
+
 ### iOS Setup
 
 ```bash
@@ -183,10 +189,10 @@ To run the included example app:
 
 ```bash
 cd example
-yarn install
-yarn ios
+pnpm install
+pnpm ios
 # or
-yarn android
+pnpm android
 ```
 
 ---

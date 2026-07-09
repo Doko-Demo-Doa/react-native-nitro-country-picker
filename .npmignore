@@ -1,4 +1,6 @@
 example/
-.yarn/
 .github/
-yarn.lock
+node_modules/
+.pnpm-debug.log
+pnpm-lock.yaml
+pnpm-workspace.yaml
