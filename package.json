@@ -54,6 +54,7 @@
   "scripts": {
     "example": "pnpm --filter react-native-nitro-country-picker-example",
     "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
+    "postinstall": "node scripts/link-android-deps.js",
     "prepare": "bob build",
     "nitrogen": "nitrogen",
     "typecheck": "tsc",
