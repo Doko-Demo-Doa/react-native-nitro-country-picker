@@ -9,8 +9,13 @@ allowBuilds:
   lefthook: true
 
 overrides:
+  brace-expansion@<1.1.16: ^1.1.16
+  brace-expansion@<1.1.17: ^1.1.17
+  brace-expansion@<1.1.18: ^1.1.18
   conventional-commits-filter: ^6.0.1
   conventional-commits-parser: ^7.0.1
+  js-yaml@>=4.0.0 <4.3.1: ^4.3.1
+  undici@>=7.0.0 <7.29.0: ^7.29.0
 
 minimumReleaseAgeExclude:
   - '@commitlint/cli@21.2.1'
@@ -29,3 +34,5 @@ minimumReleaseAgeExclude:
   - lefthook-windows-arm64@2.1.10
   - lefthook-windows-x64@2.1.10
   - lefthook@2.1.10
+  - nitrogen@0.37.0
+  - react-native-nitro-modules@0.37.0
