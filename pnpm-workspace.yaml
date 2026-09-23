@@ -9,12 +9,17 @@ allowBuilds:
   lefthook: true
 
 overrides:
+  baseline-browser-mapping@>=2.0.0 <2.11.0: ^2.11.0
   brace-expansion@<1.1.16: ^1.1.16
   brace-expansion@<1.1.17: ^1.1.17
   brace-expansion@<1.1.18: ^1.1.18
+  browserslist@<=4.28.6: ^4.28.7
   conventional-commits-filter: ^6.0.1
   conventional-commits-parser: ^7.0.1
-  js-yaml@>=4.0.0 <4.3.1: ^4.3.1
+  image-size@<=2.0.2: ^2.0.3
+  joi@>=16.0.0 <17.13.6: ^17.13.6
+  js-yaml@>=4.0.0 <4.3.2: ^4.3.2
+  qs@>=2.2.5 <6.16.0: ^6.16.0
   undici@>=7.0.0 <7.29.0: ^7.29.0
 
 minimumReleaseAgeExclude:
